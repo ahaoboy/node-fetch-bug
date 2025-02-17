@@ -13,8 +13,7 @@ async function main() {
     "https://github.com/ahaoboy/spidermonkey-build/releases/latest/download/spidermonkey-x86_64-unknown-linux-gnu.tar.xz",
     "https://github.com/ahaoboy/v8-build/releases/download/v0.1.3/v8-x86_64-unknown-linux-gnu.tar.xz",
   ]) {
-    const path = await downloadToFile(i)
-    console.log('download to ', path)
+    downloadToFile(i).then(path => console.log('download to ', path))
   }
 }
 
